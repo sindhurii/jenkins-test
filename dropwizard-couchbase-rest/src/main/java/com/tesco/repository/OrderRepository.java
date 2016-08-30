@@ -53,7 +53,6 @@ public class OrderRepository {
 		String statement = String.format(query, bucket.name());
 		N1qlQueryResult queryResult = bucket.query(N1qlQuery.simple(statement));
 
-		//if(queryResult.equals(""))
 		if (!(queryResult == null || "".equals(queryResult))) {
 			for (N1qlQueryRow row : queryResult) {
 				try {
