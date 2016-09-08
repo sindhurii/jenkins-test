@@ -29,12 +29,21 @@ public class OrderRepository {
 	JsonConverter<Order> converter;
 	Bucket bucket;
 
+	/**
+	 * 
+	 * @param converter
+	 * @param bucket
+	 */
 	public OrderRepository(JsonConverter<Order> converter, Bucket bucket) {
 		super();
 		this.converter = converter;
 		this.bucket = bucket;
 	}
 
+	/**
+	 * 
+	 * @param order
+	 */
 	public void saveOrder(Order order)  {
 
 		String orderId = Utility.generateUniqueId();
@@ -47,6 +56,10 @@ public class OrderRepository {
 
 	}
 
+	/**
+	 * 
+	 * @return List<Order>
+	 */
 	public List<Order> retriveAllOrders() {
 
 		List<Order> orderList = new ArrayList<>();
@@ -77,6 +90,11 @@ public class OrderRepository {
 	}
 
 	// query document by ViewResult
+	/**
+	 * 
+	 * @param id
+	 * @return Order
+	 */
 	public Order retriveById(String id)  {
 
 		Order order = null;
@@ -97,6 +115,10 @@ public class OrderRepository {
 
 	}
 
+	/**
+	 * 
+	 * @return Order
+	 */
 	public Order getMaxPrice() {
 		Order order = null;
 		String query = "SELECT * FROM  %s WHERE _type='"
@@ -116,6 +138,10 @@ public class OrderRepository {
 		return order;
 	}
 	
+	/**
+	 * 
+	 * @param id
+	 */
 	public void removeOrder(String id){
 		bucket.remove(id);
 	}

@@ -26,12 +26,23 @@ import com.tesco.repository.OrderRepository;
 public class OrderResource {
 
 	OrderRepository orderRepository;
-	
+	/**
+	 * 
+	 * @param orderRepository
+	 */
 	public OrderResource(OrderRepository orderRepository) {
 		super();
 		this.orderRepository = orderRepository;
 	}
 
+	/**
+	 * 
+	 * @param orderName
+	 * @param orderType
+	 * @param quantity
+	 * @param price
+	 * @return Response
+	 */
 	@POST
 	@Path("/create")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -51,6 +62,10 @@ public class OrderResource {
 
 	}
 	
+	/**
+	 * 
+	 * @return Response
+	 */
 	@GET
 	@Path("/getAll")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -61,6 +76,11 @@ public class OrderResource {
 		
 	}
 	
+	/**
+	 * 
+	 * @param id
+	 * @return Response
+	 */
 	@GET
 	@Path("/getOrder")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -71,6 +91,10 @@ public class OrderResource {
 		
 	}
 	
+	/**
+	 * 
+	 * @return Response
+	 */
 	@GET
 	@Path("/getPrice")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -81,6 +105,11 @@ public class OrderResource {
 		
 	}
 	
+	/**
+	 * 
+	 * @param id
+	 * @return Response
+	 */
 	@DELETE
 	@Path("/deleteOrder")
 	@Produces(MediaType.APPLICATION_JSON)

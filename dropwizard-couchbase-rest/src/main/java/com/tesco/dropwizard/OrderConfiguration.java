@@ -1,7 +1,11 @@
 package com.tesco.dropwizard;
 
 import io.dropwizard.Configuration;
-
+/**
+ * 
+ * @author sindhuri
+ *
+ */
 public class OrderConfiguration extends Configuration {
 	
 	private String bucketName;
