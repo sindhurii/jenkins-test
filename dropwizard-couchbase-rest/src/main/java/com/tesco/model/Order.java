@@ -1,5 +1,10 @@
 package com.tesco.model;
 
+/**
+ * 
+ * @author sindhuri
+ *
+ */
 public class Order {
 	
 	private String orderId;

@@ -16,6 +16,11 @@ import javax.ws.rs.core.Response;
 import com.tesco.model.Order;
 import com.tesco.repository.OrderRepository;
 
+/**
+ * 
+ * @author sindhuri
+ *
+ */
 @Path("/orders")
 @Produces(MediaType.APPLICATION_JSON)
 public class OrderResource {

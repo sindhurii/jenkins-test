@@ -11,9 +11,18 @@ import com.tesco.model.Order;
 import com.tesco.repository.OrderRepository;
 import com.tesco.resource.OrderResource;
 import com.tesco.service.JsonConverter;
-
+/**
+ * 
+ * @author sindhuri
+ *
+ */
 public class OrderApplication extends Application<OrderConfiguration> {
 
+	/**
+	 * 
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		
 		new OrderApplication().run(args);

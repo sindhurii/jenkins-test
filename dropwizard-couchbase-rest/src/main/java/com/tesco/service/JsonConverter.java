@@ -1,8 +1,8 @@
+package com.tesco.service;
+
 /**
  * 
  */
-package com.tesco.service;
-
 import java.io.IOException;
 
 import com.couchbase.client.java.document.JsonDocument;
