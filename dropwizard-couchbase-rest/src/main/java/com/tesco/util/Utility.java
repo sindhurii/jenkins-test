@@ -12,8 +12,4 @@ public class Utility {
 		return String.valueOf(UUID.randomUUID());
 	}
 	
-	private Utility(){
-		
-	}
-	
 }
