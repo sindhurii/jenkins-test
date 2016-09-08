@@ -1,20 +1,12 @@
 package com.tesco.repository;
 
-import static org.mockito.Mockito.when;
-
-import java.io.IOException;
-
-import javax.ws.rs.InternalServerErrorException;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 
 import com.couchbase.client.java.Bucket;
@@ -26,8 +18,8 @@ import com.tesco.model.Order;
 import com.tesco.service.JsonConverter;
 import com.tesco.util.Utility;
 
-//@RunWith(MockitoJUnitRunner.class)
-//@PrepareForTest(Utility.class)
+@RunWith(MockitoJUnitRunner.class)
+@PrepareForTest(Utility.class)
 public class OrderRepositoryTest {
 	
 	@Mock
@@ -58,10 +50,10 @@ public class OrderRepositoryTest {
 		MockitoAnnotations.initMocks(this);
 	}
 	
-	/*@Test
+	@Test
 	public void testSaveOrder() {
 		
-		PowerMockito.mockStatic(Utility.class);
+		/*PowerMockito.mockStatic(Utility.class);
         when(Utility.generateUniqueId()).thenReturn(Mockito.anyString());
 		try {
 			Mockito.when(mockConverter.serialize(Mockito.anyString(), Mockito.anyObject())).thenReturn(mockJsonDoc);
@@ -69,8 +61,8 @@ public class OrderRepositoryTest {
 			mockOrderRepository.saveOrder(mockOrder);
 		} catch (IOException e) {
 			throw new InternalServerErrorException(e);
-		}
+		}*/
 	}
-	*/
+	
 
 }
