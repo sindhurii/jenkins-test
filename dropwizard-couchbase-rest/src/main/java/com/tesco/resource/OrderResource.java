@@ -75,36 +75,7 @@ public class OrderResource {
 		return Response.ok().entity(orderList).build();
 		
 	}
-	
-	/**
-	 * 
-	 * @param id
-	 * @return Response
-	 */
-	@GET
-	@Path("/getOrder")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response getOrder(@QueryParam("id") String id){
-		
-		Order order = orderRepository.retriveById(id);
-		return Response.ok().entity(order).build();
-		
-	}
-	
-	/**
-	 * 
-	 * @return Response
-	 */
-	@GET
-	@Path("/getPrice")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response getMaxPrice(){
-		
-		Order order = orderRepository.getMaxPrice();
-		return Response.ok().entity(order.getPrice()).build();
-		
-	}
-	
+
 	/**
 	 * 
 	 * @param id
