@@ -4,6 +4,7 @@
 	<groupId>dropwizard-couchbase-rest</groupId>
 	<artifactId>dropwizard-couchbase-rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 
 	<dependencies>
 
